@@ -35,7 +35,7 @@
         android:layout_above="@+id/dateBtn"
         android:layout_alignParentLeft="true"
         android:gravity="center"
-        android:text="@+id/digitalClock"
+       
         android:textSize="20dip" />
 
     <EditText
