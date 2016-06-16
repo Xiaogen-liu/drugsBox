@@ -3,53 +3,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <AnalogClock
-        android:id="@+id/analogClock"
-        android:layout_width="fill_parent"
+    <TimePicker
+        android:id="@+id/timePik"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="82dp"
-        android:gravity="center" />
-
-    <Button
-        android:id="@+id/timeBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/analogClock"
-        android:layout_alignParentLeft="true"
-        android:text="时间对话框" />
-
-    <Button
-        android:id="@+id/dateBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/timeBtn"
-        android:layout_alignParentLeft="true"
-        android:text="日期对话框" />
-
-    <DigitalClock
-        android:id="@+id/DigitalClock01"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/dateBtn"
-        android:layout_alignParentLeft="true"
-        android:gravity="center"
-       
-        android:textSize="20dip" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/et"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/DigitalClock01"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
         android:cursorVisible="false"
         android:editable="false"
-        android:ems="10" >
+        android:ems="10" />
 
-        <requestFocus />
-    </EditText>
+    <DigitalClock
+        android:id="@+id/DigitalClock01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/et"
+        android:gravity="center"
+        android:textSize="20dip" />
+
+    <Button
+        android:id="@+id/dateBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/DigitalClock01"
+        android:layout_marginTop="24dp"
+        android:text="日期对话框" />
+
+    <Button
+        android:id="@+id/timeBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dateBtn"
+        android:text="时间对话框" />
+
+ 
 
 </RelativeLayout>

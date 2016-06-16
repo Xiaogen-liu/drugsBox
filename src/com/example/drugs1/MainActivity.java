@@ -53,13 +53,13 @@ public class MainActivity extends Activity {
 		switch (id) {
 		case DATE_DIALOG:
 			c = Calendar.getInstance();
-			dialog = new DatePickerDialog(this,new DatePickerDialog.OnDateSetListener()
-			{
+			dialog = new DatePickerDialog(this,
+					new DatePickerDialog.OnDateSetListener() {
 						public void onDateSet(DatePicker dp, int year,
 								int month, int dayOfMonth) {
 							et.setText("您选择了：" + year + "年" + (month + 1) + "月"
 									+ dayOfMonth + "日");
-						}                                                                                                                                                 
+						}
 					}, c.get(Calendar.YEAR), // 传入年份
 					c.get(Calendar.MONTH), // 传入月份
 					c.get(Calendar.DAY_OF_MONTH) // 传入天数
@@ -68,8 +68,8 @@ public class MainActivity extends Activity {
 		case TIME_DIALOG:
 			c = Calendar.getInstance();
 			dialog = new TimePickerDialog(
-					this,new TimePickerDialog.OnTimeSetListener() 
-					{
+					this,
+					new TimePickerDialog.OnTimeSetListener() {
 						public void onTimeSet(TimePicker view, int hourOfDay,
 								int minute) {
 							et.setText("您选择了：" + hourOfDay + "时" + minute + "分");
@@ -80,7 +80,6 @@ public class MainActivity extends Activity {
 		}
 		return dialog;
 	}
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
